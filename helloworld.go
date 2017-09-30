@@ -77,21 +77,6 @@ func fileServer(w http.ResponseWriter, r *http.Request) {
 
     fp := path.Join(".", "daddy.mp4")
     http.ServeFile(w, r, fp)
-
-    // or
-    // video, err := os.Open("./sing.mp4")
-    // if err != nil {
-    //     log.Fatal(err)
-    // }
-    // defer video.Close()
-    //  ip := ""
-    // // ip := r.Header.get("Remote_addr")
-    // // if (ip=="") {
-    //    ip = r.RemoteAddr
-    // // }
-    // fmt.Println("IP: ", ip)
-
-    // http.ServeContent(w, r, "sing.mp4", time.Now(), video)
 }
 
 func indexPage(w http.ResponseWriter, r *http.Request) {
